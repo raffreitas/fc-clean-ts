@@ -9,14 +9,10 @@ describe("Domain events tests", () => {
 
     eventDispatcher.register("ProductCreatedEvent", eventHandler);
 
+    expect(eventDispatcher.getEventHandlers.ProductCreatedEvent).toBeDefined();
+    expect(eventDispatcher.getEventHandlers.ProductCreatedEvent.length).toBe(1);
     expect(
-      eventDispatcher.getEventHandlers["ProductCreatedEvent"],
-    ).toBeDefined();
-    expect(eventDispatcher.getEventHandlers["ProductCreatedEvent"].length).toBe(
-      1,
-    );
-    expect(
-      eventDispatcher.getEventHandlers["ProductCreatedEvent"][0],
+      eventDispatcher.getEventHandlers.ProductCreatedEvent[0],
     ).toMatchObject(eventHandler);
   });
 
@@ -27,17 +23,13 @@ describe("Domain events tests", () => {
     eventDispatcher.register("ProductCreatedEvent", eventHandler);
 
     expect(
-      eventDispatcher.getEventHandlers["ProductCreatedEvent"][0],
+      eventDispatcher.getEventHandlers.ProductCreatedEvent[0],
     ).toMatchObject(eventHandler);
 
     eventDispatcher.unregister("ProductCreatedEvent", eventHandler);
 
-    expect(
-      eventDispatcher.getEventHandlers["ProductCreatedEvent"],
-    ).toBeDefined();
-    expect(eventDispatcher.getEventHandlers["ProductCreatedEvent"].length).toBe(
-      0,
-    );
+    expect(eventDispatcher.getEventHandlers.ProductCreatedEvent).toBeDefined();
+    expect(eventDispatcher.getEventHandlers.ProductCreatedEvent.length).toBe(0);
   });
 
   it("should unregister all event handlers", () => {
@@ -47,13 +39,13 @@ describe("Domain events tests", () => {
     eventDispatcher.register("ProductCreatedEvent", eventHandler);
 
     expect(
-      eventDispatcher.getEventHandlers["ProductCreatedEvent"][0],
+      eventDispatcher.getEventHandlers.ProductCreatedEvent[0],
     ).toMatchObject(eventHandler);
 
     eventDispatcher.unregisterAll();
 
     expect(
-      eventDispatcher.getEventHandlers["ProductCreatedEvent"],
+      eventDispatcher.getEventHandlers.ProductCreatedEvent,
     ).toBeUndefined();
   });
 
@@ -65,7 +57,7 @@ describe("Domain events tests", () => {
     eventDispatcher.register("ProductCreatedEvent", eventHandler);
 
     expect(
-      eventDispatcher.getEventHandlers["ProductCreatedEvent"][0],
+      eventDispatcher.getEventHandlers.ProductCreatedEvent[0],
     ).toMatchObject(eventHandler);
 
     const productCreatedEvent = new ProductCreatedEvent({

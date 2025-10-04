@@ -22,11 +22,11 @@
   "dependencies": {
     "better-sqlite3": "^12.4.1",
     "reflect-metadata": "^0.2.2",
-    "typeorm": "^0.3.27",
-    "vitest": "^3.2.4"
+    "typeorm": "^0.3.27"
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.5",
-    "@types/node": "^24.6.2"
+    "@types/node": "^24.6.2",
+    "vitest": "^3.2.4"
   }
 }
