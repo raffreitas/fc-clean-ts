@@ -1,0 +1,32 @@
+{
+  "name": "fc-clean-ts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest run",
+    "test:typeorm": "vitest run src/infrastructure/*/repository/typeorm/",
+    "test:watch": "vitest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raffreitas/fc-clean-ts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raffreitas/fc-clean-ts/issues"
+  },
+  "homepage": "https://github.com/raffreitas/fc-clean-ts#readme",
+  "description": "",
+  "dependencies": {
+    "better-sqlite3": "^12.4.1",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^0.3.27",
+    "vitest": "^3.2.4"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.2.5",
+    "@types/node": "^24.6.2"
+  }
+}
