@@ -23,7 +23,9 @@
       "extensions": [
         "vitest.explorer",
         "editorconfig.editorconfig",
-        "biomejs.biome"
+        "biomejs.biome",
+        "github.vscode-github-actions",
+        "redhat.vscode-yaml"
       ]
     }
   }
