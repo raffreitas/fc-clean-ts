@@ -17,9 +17,6 @@ importers:
       typeorm:
         specifier: ^0.3.27
         version: 0.3.27(better-sqlite3@12.4.1)(reflect-metadata@0.2.2)(sqlite3@5.1.7)
-      vitest:
-        specifier: ^3.2.4
-        version: 3.2.4(@types/node@24.6.2)
     devDependencies:
       '@biomejs/biome':
         specifier: 2.2.5
@@ -27,6 +24,9 @@ importers:
       '@types/node':
         specifier: ^24.6.2
         version: 24.6.2
+      vitest:
+        specifier: ^3.2.4
+        version: 3.2.4(@types/node@24.6.2)
 
 packages:
 
