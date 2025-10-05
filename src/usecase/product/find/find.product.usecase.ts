@@ -5,9 +5,7 @@ import type {
 } from "./find.product.dto";
 
 export class FindProductUseCase {
-  constructor(
-    private readonly productRepository: ProductRepositoryInterface,
-  ) {}
+  constructor(private readonly productRepository: ProductRepositoryInterface) {}
 
   async execute(input: InputFindProductDto): Promise<OutputFindProductDto> {
     const product = await this.productRepository.find(input.id);
