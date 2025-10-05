@@ -8,6 +8,7 @@ import type { InputUpdateCustomerDto } from "../../../usecase/customer/update/up
 import { UpdateCustomerUseCase } from "../../../usecase/customer/update/update.customer.usecase";
 import CustomerRepository from "../../customer/repository/typeorm/customer.repository";
 import { typeorm } from "../express";
+import { CustomerPresenter } from "../presenters/customer.presenter";
 
 export const customerRoute = Router();
 
@@ -34,7 +35,10 @@ customerRoute.get("/", async (_: Request, res: Response) => {
   try {
     const usecase = new ListCustomerUseCase(new CustomerRepository(typeorm));
     const output = await usecase.execute();
-    return res.status(200).json(output);
+    return res.status(200).format({
+      json: () => res.json(output),
+      xml: () => res.send(CustomerPresenter.listXML(output)),
+    });
   } catch (error) {
     return res.status(500).json(error);
   }

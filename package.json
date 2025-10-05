@@ -25,6 +25,7 @@
     "better-sqlite3": "^12.4.1",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
+    "jstoxml": "^7.0.1",
     "reflect-metadata": "^0.2.2",
     "typeorm": "^0.3.27",
     "yup": "^1.7.1"
@@ -32,6 +33,7 @@
   "devDependencies": {
     "@biomejs/biome": "2.2.5",
     "@types/express": "^5.0.3",
+    "@types/jstoxml": "^5.0.0",
     "@types/node": "^24.6.2",
     "@types/supertest": "^6.0.3",
     "supertest": "^7.1.4",
