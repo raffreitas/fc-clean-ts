@@ -15,10 +15,10 @@ export default class CustomerRepository implements CustomerRepositoryInterface {
     const customerModel = this.repository.create({
       id: entity.id,
       name: entity.name,
-      street: entity.Address.street,
-      number: entity.Address.number,
-      zipcode: entity.Address.zip,
-      city: entity.Address.city,
+      street: entity.address.street,
+      number: entity.address.number,
+      zipcode: entity.address.zip,
+      city: entity.address.city,
       active: entity.isActive(),
       rewardPoints: entity.rewardPoints,
     });
@@ -29,10 +29,10 @@ export default class CustomerRepository implements CustomerRepositoryInterface {
   async update(entity: Customer): Promise<void> {
     await this.repository.update(entity.id, {
       name: entity.name,
-      street: entity.Address.street,
-      number: entity.Address.number,
-      zipcode: entity.Address.zip,
-      city: entity.Address.city,
+      street: entity.address.street,
+      number: entity.address.number,
+      zipcode: entity.address.zip,
+      city: entity.address.city,
       active: entity.isActive(),
       rewardPoints: entity.rewardPoints,
     });
