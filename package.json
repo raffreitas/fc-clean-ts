@@ -5,7 +5,8 @@
   "scripts": {
     "test": "vitest run",
     "test:typeorm": "vitest run src/infrastructure/*/repository/typeorm/",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "dev": "tsx watch src/infrastructure/api/server.ts"
   },
   "repository": {
     "type": "git",
@@ -21,12 +22,18 @@
   "description": "",
   "dependencies": {
     "better-sqlite3": "^12.4.1",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
     "reflect-metadata": "^0.2.2",
     "typeorm": "^0.3.27"
   },
   "devDependencies": {
     "@biomejs/biome": "2.2.5",
+    "@types/express": "^5.0.3",
     "@types/node": "^24.6.2",
+    "@types/supertest": "^6.0.3",
+    "supertest": "^7.1.4",
+    "tsx": "^4.20.6",
     "vitest": "^3.2.4"
   }
 }
